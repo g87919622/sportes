@@ -5,8 +5,8 @@ body {
 }
 
 header {
-  background: navy;
-  color: white;
+  background: rgb(207, 207, 219);
+  color: rgb(8, 4, 4);
   text-align: center;
   padding: 20px; 
 }
@@ -22,10 +22,13 @@ footer {
   text-align: center;
   padding: 10px;
 }
-
-section {
-  text-align: center;
+skills{
   border: 100px;
-  border-radius: 50px;
-  border-color: rgb(201, 20, 20);
+  border-radius: 10px;
+  border-color: rgb(22, 3, 3);
+}
+image{
+  text-align: end;
+  width: 20px;
+  box-sizing: 10cm;
 }
