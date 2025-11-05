@@ -1,63 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeelan | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
 </head>
 <body>
 
-  <div id="hero"> </div>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-box">
+      <img src="./WhatsApp Image 2025-11-04 at 17.35.55_1d6ba9ae.jpg" class="profile-img" alt="profile">
 
-  <header>
-    <h1> GOVARDHAN.R </h1>
-    <p> SPORTS PERSON </p>
+      <h1>Hello, I'm <span class="highlight">GOVARDHAN.R</span></h1>
+      <h3 class="typing"></h3>
+
+      <div class="social">
+        <a href="#"><span class="material-icons-outlined">mail</span></a>
+        <a href="#"><span class="material-icons-outlined">code</span></a>
+        <a href="#"><span class="material-icons-outlined">public</span></a>
+      </div>
+
+      <a href="#projects" class="btn">Explore Projects</a>
+    </div>
   </header>
 
-
-
-  <section id="about" class = "box">
-  <img src="WhatsApp Image 2025-11-04 at 17.35.55_1d6ba9ae.jpg" alt="" srcset="WhatsApp Image 2025-11-04 at 17.35.55_1d6ba9ae.jpg"> 
+  <!-- ABOUT -->
+  <section class="box" id="about">
     <h2>About Me</h2>
-    <p> => day of birth : 20/02/2008 </p>
-    <p> => father name :ravichandra </p>
-    <p> => I love sports </p>
+    <p>
+      I compelied my terkking in westren gadues in coorg motuane hight is 1,734(5,473 fites)
+    </p>
   </section>
 
-
-
-  <section id="skills">
+  <!-- SKILLS -->
+  <section class="box" id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li> => RUNING </li>
-      <li> => JAVELIN & SHOT PUT </li>
-      <li> => THROW BOLL & MARATHON </li>
-      <li> => TRACKING </li>
-      <li> => I COMPLETED MY TREKING IN WESTERN GHATS TADIANDAMOL (THE HIGHEST PEAK IN COORG)THE HEIGHT IS 1,748 meters(5,735 feet)</li>
-    </ul>
+
+    <div class="skill">
+      <span>shot put hight is 10.5 meters</span>
+      <div class="bar"><div style="width: 85%;"></div></div>
+    </div>
+
+    <div class="skill">
+      <span>terkking</span>
+      <div class="bar"><div style="width: 90%;"></div></div>
+    </div>
+
+    <div class="skill">
+      <span>RUNING</span>
+      <div class="bar"><div style="width: 70%;"></div></div>
+    </div>
+  
+  
+  <div class="skill">
+    <span>javalin thuro hight is 40 meters</span>
+    <div class="bar"><div style="width: 80%;"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>Driving I have 4 years experence</span>
+    <div class="bar"><div style="width: 90%;"></div></div>
+  </div>
+  </section>
+  
+
+  <!-- PROJECTS -->
+  <section class="box" id="Hobbies">
+    <h2>Hobbies</h2>
+
+    <div class="Hobbies">
+      <h3>Driving,video gumes</h3>
+      <p>In Driving I have 4 years experence & video gumes I have 8 years experence </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio built using RUNING and shot put.</p>
+    </div>
   </section>
 
-  <section id="hobbies">
-    <h2>hobbies</h2>
-    <p> => my hobbies </p>
-    <p> => Driving & agriculture </p>
-    <P> => Gun shooting </P>
-  </section>
-
+  <!-- FOOTER -->
   <footer>
-    <a href= "g87919622@gmail.com"> g87919622@gmail.com</a>
+    <p>Contact: <a href="g87919622@gmail.com">g87919622@gmail.com</a></p>
+    <p>© 2025 | Designed by govardhan</p>
   </footer>
+
+  <!-- SCRIPT -->
   <script>
-    let name = "govardhan";
-    var age = 17;
-    const college = "BTI";
-    let hero = document.getElementById("hero");
-    hero.innerHTML = <>Welcome to ${name}'s Portfolio</>;
+    const text = ["sportes peerson", "Driving", "army"];
+    let index = 0;
+    let charIndex = 0;
 
-    let a = 10;
-    let b = 20;
-    let c = a * b;
-    hero.innerHTML = c
-    </script>
+    function typeWriter() {
+      let typingElement = document.querySelector(".typing");
+      if (charIndex < text[index].length) {
+        typingElement.innerHTML += text[index].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, 100);
+      } else {
+        setTimeout(() => {
+          typingElement.innerHTML = "";
+          charIndex = 0;
+          index = (index + 1) % text.length;
+          typeWriter();
+        }, 1200);
+      }
+    }
 
+    typeWriter();
+  </script>
 </body>
 </html>
